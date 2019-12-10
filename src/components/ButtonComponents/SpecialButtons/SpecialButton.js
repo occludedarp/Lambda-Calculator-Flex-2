@@ -2,7 +2,7 @@ import React from "react";
 
 const SpecialButton = (props) => {
   return (
-      <button>{props.spButtonText}</button>
+      <button onClick={() => props.displaySp(props.spButtonText)}>{props.spButtonText}</button>
   );
 };
 

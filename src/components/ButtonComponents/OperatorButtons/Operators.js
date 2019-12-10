@@ -6,7 +6,7 @@ import OperatorButton from "./OperatorButton";
 
 //Import your array data to from the provided data file
 
-const Operators = ({ opData }) => {
+const Operators = ({ opData, displayOp }) => {
   // STEP 2 - add the imported data to state
   
   return (
@@ -14,6 +14,7 @@ const Operators = ({ opData }) => {
       {opData.map((operator, index) => (
         <OperatorButton 
           opButtonText={operator.char}
+          displayOp={displayOp}
           key={index}
         />
       ))}

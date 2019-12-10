@@ -5,7 +5,7 @@ import SpecialButton from "./SpecialButton";
 
 //Import your array data to from the provided data file
 
-const Specials = ({ spData }) => {
+const Specials = ({ spData, displaySp }) => {
   // STEP 2 - add the imported data to state
   
   return (
@@ -14,6 +14,7 @@ const Specials = ({ spData }) => {
         <SpecialButton 
           spButtonText={special}
           key={index}
+          displaySp={displaySp}
         />
       ))}
     </div>

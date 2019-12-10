@@ -2,7 +2,7 @@ import React from "react";
 
 const OperatorButton = (props) => {
   return (
-      <button>{props.opButtonText}</button>
+      <button onClick={() => props.displayOp(props.opButtonText)}> {props.opButtonText} </button>
   );
 };
 
