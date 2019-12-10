@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { specials } from "../../../data";
+import React from "react";
 import SpecialButton from "./SpecialButton";
 
 //import any components needed
 
 //Import your array data to from the provided data file
 
-const Specials = () => {
+const Specials = ({ spData }) => {
   // STEP 2 - add the imported data to state
-  const [specialIs, setSpecial] = useState(specials)
+  
   return (
     <div>
-      {specialIs.map((special, index) => (
+      {spData.map((special, index) => (
         <SpecialButton 
           spButtonText={special}
           key={index}

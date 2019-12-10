@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { numbers } from "../../../data";
+import React from "react";
+
 import NumberButton from "./NumberButton";
 
 //import any components needed
@@ -9,13 +9,12 @@ import { numbers } from '../../../data'
 */
 //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = ({ numData }) => {
   // STEP 2 - add the imported data to state
-  const [numberIs, setNumber] = useState(numbers)
 
   return (
     <div>
-      {numberIs.map( (number, index) => (
+      {numData.map( (number, index) => (
         <NumberButton 
           numButtonText={number}
           key={index}/>
