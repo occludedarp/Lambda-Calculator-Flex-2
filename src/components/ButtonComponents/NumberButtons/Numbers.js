@@ -9,14 +9,15 @@ import { numbers } from '../../../data'
 */
 //Import your array data to from the provided data file
 
-const Numbers = ({ numData }) => {
+const Numbers = (props) => {
   // STEP 2 - add the imported data to state
 
   return (
     <div>
-      {numData.map( (number, index) => (
+      {props.numData.map( (number, index) => (
         <NumberButton 
           numButtonText={number}
+          displayIt={props.displayNum}
           key={index}/>
       ))}
     </div>

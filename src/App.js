@@ -18,7 +18,11 @@ function App() {
   const [numberIs, setNumber] = useState(numbers);
   const [operatorIs, setOperator] = useState(operators);
   const [specialIs, setSpecial] = useState(specials);
+  const [displayIs, setDisplay] = useState(' ');
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
+  const displayButton = value => {
+    setDisplay(displayIs => displayIs + value)
+  };
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
@@ -27,10 +31,10 @@ function App() {
     <div className="container">
       <Logo />
       <div className="App">
-        <Display />
-        <Numbers numData={numberIs}/>
-        <Operators opData={operatorIs}/>
-        <Specials spData={specialIs}/>
+        <Display displayed={displayIs}/>
+        <Numbers numData={numberIs} displayNum={displayButton}/>
+        <Operators opData={operatorIs} />
+        <Specials spData={specialIs} />
       </div>
     </div>
   );
